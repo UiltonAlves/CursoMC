@@ -1,4 +1,4 @@
-package com.agenciakriativa.cursomc.exceptions;
+package com.agenciakriativa.cursomc.services.exceptions;
 
 public class ObjectNotFoundException extends RuntimeException{
 
