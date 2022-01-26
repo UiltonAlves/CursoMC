@@ -51,15 +51,11 @@ public class CategoriaResources {
 	}
 	
 	
-	
-	
 	@RequestMapping(value="/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Void> delete(@RequestBody Categoria obj){
+	public ResponseEntity<Void> delete(@PathVariable Integer id){
 		
-		obj = service.insert(obj);
+		service.delete(id);
 		
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
-		
-		return ResponseEntity.created(uri).build();
+		return ResponseEntity.noContent().build();
 	}
 }
