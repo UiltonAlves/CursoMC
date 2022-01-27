@@ -35,26 +35,22 @@ public class CategoriaService {
 	}
 
 	public Categoria update(Categoria obj) {
-
 		find(obj.getId());
-
 		return repo.save(obj);
 	}
 
 	public void delete(Integer id) {
-
 		try {
 			repo.deleteById(id);
 
 		} catch (DataIntegrityViolationException e) {
 
-			throw new DataIntegrityException("Não e possivel excluir uma categoria que possue produtos!");
+			throw new DataIntegrityException("Não e possivel excluir uma Categoria que possue produtos!");
 		}
 
 	}
 
 	public List<Categoria> findAll() {
-
 		return repo.findAll();
 	}
 
@@ -64,7 +60,6 @@ public class CategoriaService {
 	}
 
 	public Categoria fromDto(CategoriaDTO objDto) {
-		
 		return new Categoria(objDto.getId(), objDto.getNome());
 	}
 
