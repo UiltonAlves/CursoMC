@@ -13,6 +13,7 @@ import com.agenciakriativa.cursomc.services.DbService;
 @Profile("test")
 public class TestConfig {
 	
+	
 	@Autowired
 	private DbService dbService;
 	
