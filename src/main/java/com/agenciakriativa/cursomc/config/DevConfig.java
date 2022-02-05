@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.agenciakriativa.cursomc.services.DbService;
 
 @Configuration
-@Profile("test")
+@Profile("dev")
 public class DevConfig {
 	
 	
